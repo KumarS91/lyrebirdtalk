@@ -1,0 +1,67 @@
+
+.App {
+  text-align: center;
+ 
+}
+.textfield{
+  margin: 15px ;
+  border: solid 2px #3c56e7;
+  background: transparent;
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+.audio__box {
+  background: rgb(230, 212, 163);
+  padding-bottom: 2rem;
+  border-radius: 5px;
+  box-shadow: -1px 2px 34px -13px rgba(0,0,0,0.75);
+  text-align: center;
+  overflow: hidden;
+}
+.audio__text {
+  text-align: left;
+  margin-left: 10px;
+}
+.controls{
+  text-align:center;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  padding: 3px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+body{
+  background: #bff3a8;
+  font-color: #502ada;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.button{
+  margin-bottom:3rem;
+  display:block;
+}
+
+
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

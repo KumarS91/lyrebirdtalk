@@ -1,0 +1,11 @@
+export const requestPending ='REQUEST_PENDING';
+export const requestSolved = 'REQUEST_SOLVED';
+export const requestError = 'REQUEST_ERROR';
+export const onSearchInputChange = 'ONSEARCH_INPUT_CHANGE';
+export const onPostInputChange = 'ONPOST_INPUT_CHANGE';
+export const postRequestSolved = 'POST_REQUEST_SOLVED';
+export const postRequestError = 'POST_REQUEST_ERROR';
+export const postRequestPending = 'POST_REQUEST_PENDING';
+export const tokenExpired = 'TOKEN_EXPIRED';
+export const postTokenExpired = 'POST_TOKEN_EXPIRED';
+export const clearInputs ='CLEAR_INPUTS';
