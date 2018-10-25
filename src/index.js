@@ -1,11 +1,8 @@
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
-
 import * as serviceWorker from './serviceWorker';
-
 import {applyMiddleware, combineReducers, createStore} from 'redux';
 import {postGenarateReducer, voiceReducer} from './components/Reducer/Reducer';
-
 import App from './App';
 import {Provider} from 'react-redux';
 import React from 'react';
