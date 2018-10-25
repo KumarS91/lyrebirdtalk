@@ -77,28 +77,28 @@ class App extends Component {
           </Alert>
         }
               <div>
-              <Button bsStyle="primary" onClick={this.getAccessToken}
+                <Button bsStyle="primary" onClick={this.getAccessToken}
                   style={{marginBottom:"25px"}}>Get Access Token</Button>
               </div>
               <div>
-              <Button bsStyle="info" onClick={this.props.onGetVoices}
+                <Button bsStyle="info" onClick={this.props.onGetVoices}
                   style={{marginBottom:"20px"}}> Click here to view list of Voices</Button>
               </div>
               <div>
-              <input className='textfield' type="text" id="text" 
+                <input className='textfield' type="text" id="text" 
                   placeholder="Enter text to search" value={this.props.searchText} onChange={this.props.handleSearchChange}/>
               </div>
               <div>            
-              <input className='textfield' type="text" id="posttext" 
+                <input className='textfield' type="text" id="posttext" 
                   placeholder="Enter text to post" onChange={this.props.handlePostChange} value={this.props.postText}/>
-              <Button bsStyle="success" onClick = {this.props.generateAudio}>Generate Audio</Button>
+                <Button bsStyle="success" onClick = {this.props.generateAudio}>Generate Audio</Button>
               </div>            
               {this.props.loading &&
                 <Alert color="warning"> 
                   Loading ...
                 </Alert>}     
               <div>
-              <Utterances voices={filteredVoices}/>
+                <Utterances voices={filteredVoices}/>
               </div> 
        </div>
     );
