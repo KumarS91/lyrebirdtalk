@@ -10,15 +10,15 @@ class Utteranceslist extends Component {
                     <div  className="col-md-12" style={{marginBottom:"25px"}}>
                         <div className="audio__box">
                             <div className="audio__text">
-                            <h3 >{text.length<50?`${text}`:
-                            `${text.substring(0,55)}...`}</h3></div>
-                             <audio controls preload="auto"
+                                <h3 >{text.length<50?`${text}`:
+                                `${text.substring(0,55)}...`}</h3></div>
+                                <audio controls preload="auto"
                                    src={url} type="audio/wav">Play audio
-                             </audio>
+                                </audio>
                              </div>                                            
-                         </div>                               
-                </div>
-             </div>                 
+                          </div>                               
+                        </div>
+                </div>                 
              )
          }
 }
