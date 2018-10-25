@@ -2,7 +2,7 @@ import './App.css';
 import React, { Component } from 'react';
 import {clearInput, getVoices, onPostChange, onSearchChange, postVoice} from './components/Actions/Actions';
 import {Alert} from 'reactstrap';
-import Voices from '../src/components/Voices/Voice';
+import Utterances from '../src/components/Voices/Utterances';
 import {connect} from 'react-redux';
 import {Button } from 'react-bootstrap';
 
@@ -48,7 +48,8 @@ let mapDispatchToProps = (dispatch)=>{
 class App extends Component {
   getAccessToken=()=>{
     const redirect_uri = encodeURIComponent(process.env.REACT_APP_REDIRECT_URI)
-    window.location.href =`https://myvoice.lyrebird.ai/authorize?response_type=token&client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${redirect_uri}&scope=voice&state=123456789`;
+    window.location.href =`https://myvoice.lyrebird.ai/authorize?response_type=token&
+      client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${redirect_uri}&scope=voice&state=123456789`;
   }
 
   componentWillReceiveProps(nextProps){
@@ -76,16 +77,20 @@ class App extends Component {
           </Alert>
         }
               <div>
-              <Button bsStyle="primary" onClick={this.getAccessToken}style={{marginBottom:"25px"}}>Get Access Token</Button>
+              <Button bsStyle="primary" onClick={this.getAccessToken}
+                  style={{marginBottom:"25px"}}>Get Access Token</Button>
               </div>
               <div>
-              <Button bsStyle="info" onClick={this.props.onGetVoices}style={{marginBottom:"20px"}}> Click here to view list of Voices</Button>
+              <Button bsStyle="info" onClick={this.props.onGetVoices}
+                  style={{marginBottom:"20px"}}> Click here to view list of Voices</Button>
               </div>
               <div>
-              <input className='textfield' type="text" id="text" placeholder="Enter text to search" value={this.props.searchText} onChange={this.props.handleSearchChange}/>
+              <input className='textfield' type="text" id="text" 
+                  placeholder="Enter text to search" value={this.props.searchText} onChange={this.props.handleSearchChange}/>
               </div>
               <div>            
-              <input className='textfield' type="text" id="posttext" placeholder="Enter text to post" onChange={this.props.handlePostChange} value={this.props.postText}/>
+              <input className='textfield' type="text" id="posttext" 
+                  placeholder="Enter text to post" onChange={this.props.handlePostChange} value={this.props.postText}/>
               <Button bsStyle="success" onClick = {this.props.generateAudio}>Generate Audio</Button>
               </div>            
               {this.props.loading &&
@@ -93,7 +98,7 @@ class App extends Component {
                   Loading ...
                 </Alert>}     
               <div>
-              <Voices voices={filteredVoices}/>
+              <Utterances voices={filteredVoices}/>
               </div> 
        </div>
     );
