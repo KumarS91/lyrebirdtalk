@@ -13,8 +13,7 @@ import {
 } from './Constants';
 
 export let getVoices=()=>(dispatch)=>{
-    dispatch({type:requestPending});
-    
+    dispatch({type:requestPending});    
     let location = window.location.href;
     if(location.includes('#access_token')){
             let accessToken = location.match(/\#(?:access_token)\=([\S\s]*?)\&/)[1];
@@ -49,9 +48,6 @@ export let clearInput = () => ({
     
 })
 
-
-
-
 export let postVoice=(text)=>(dispatch)=>{
     dispatch({type:postRequestPending});
     let location = window.location.href;
@@ -66,12 +62,10 @@ export let postVoice=(text)=>(dispatch)=>{
                         },
                         body:JSON.stringify({
                         "text" : `${text}`
-                        })
-                        
+                        })                        
                         }).then(response => response.text())
                         .then(success => dispatch({ type : postRequestSolved , success }) )
-                        .catch(error => dispatch({ type : postRequestError , error}))
-        
+                        .catch(error => dispatch({ type : postRequestError , error}))        
        
     }else{
         dispatch({type : postTokenExpired})
